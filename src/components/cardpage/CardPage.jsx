@@ -9,7 +9,7 @@ const CardPage = () =>{
     return(
         <>
         <Header />
-        <PageHeader  title="SƏBƏTİ"  txtmain="Etta.az" itempage="Səbətim"/>
+        <PageHeader  title="SƏBƏTİM"  txtmain="Etta.az" itempage="Səbətim"/>
         <CardPageContent />
         <Footer />
         </>
