@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <!---------- Etta-link ------------>
+
+  <link rel="stylesheet" href="./assets/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/tiny-slider.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+/>
+  <link rel="stylesheet" href="./assets/bootstrap-slider.min.css">
+  <link rel="stylesheet" href="./assets/app.min.css">
+  <link rel="stylesheet" href="./assets/app.min.css.map">
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>React App</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="./assets/jquery-3.4.1.min.js"></script>
+
+  
+  <script src="./assets/tiny-slider.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+ 
+
+<script>
+    if ($('.main-slider').length > 0) {
+
+      let popularCountriesCarousel;
+
+      if ($(window).width() < 768) {
+        popularCountriesCarousel = tns({
+          container: '.main-slider',
+          items: 1,
+          autoplay: true,
+          autoplayButtonOutput: false,
+          navPosition: 'bottom',
+          mouseDrag: true,
+          lazyload: true,
+          controls: false,
+          nav: true
+        });
+      }
+      else {
+        popularCountriesCarousel = tns({
+          container: '.main-slider',
+          items: 1,
+          autoplay: true,
+          autoplayButtonOutput: false,
+          navPosition: 'bottom',
+          mouseDrag: true,
+          lazyload: true,
+          controls: false,
+          navContainer: '.main-slider-thumbnails',
+          navAsThumbnails: true,
+        });
+
+        var customControls = tns({
+          container: '.main-slider-thumbnails',
+          items: 5,
+          gutter: 30,
+          mouseDrag: true,
+          nav: false,
+          lazyload: true,
+          controls: false,
+        });
+      }
+
+    }
+
+    if ($('.brands-carousel').length > 0) {
+      var brandsCarousel = tns({
+        container: '.brands-carousel',
+        items: 2,
+        autoplay: true,
+        autoplayButtonOutput: false,
+        navPosition: 'bottom',
+        mouseDrag: true,
+        controls: false,
+
+        responsive: {
+          0: {
+            items: 3,
+            gutter: 20,
+            center: true
+          },
+          576: {
+            items: 4,
+            gutter: 30
+          },
+          768: {
+            items: 4,
+            gutter: 40,
+            center: true
+          },
+          992: {
+            items: 5,
+            gutter: 60,
+            center: false
+          },
+        }
+      });
+    }
+
+    if ($('.new-products-carousel').length > 0) {
+      var newProductsCarousel = tns({
+        container: '.new-products-carousel',
+        autoplay: true,
+        autoplayButtonOutput: false,
+        navPosition: 'bottom',
+        mouseDrag: true,
+        controls: false,
+        responsive: {
+          0: {
+            items: 2,
+            gutter: 8,
+            center: true
+          },
+          575: {
+            gutter: 16,
+            center: false
+          },
+          768: {
+            items: 3,
+            gutter: 16,
+          },
+          992: {
+            items: 3,
+            gutter: 30,
+          },
+        }
+      });
+    }
+
+    if ($('.article-carousel').length > 0) {
+      var articleCarousel = tns({
+        container: '.article-carousel',
+        autoplay: true,
+        autoplayButtonOutput: false,
+        navPosition: 'bottom',
+        mouseDrag: true,
+        controls: false,
+        responsive: {
+          0: {
+            items: 1,
+            gutter: 8,
+            center: true,
+            edgePadding: 40,
+          },
+          575: {
+            gutter: 16,
+            center: false
+          },
+          768: {
+            items: 2,
+            gutter: 16,
+            edgePadding: 0,
+          },
+          1200: {
+            gutter: 30,
+          },
+        }
+      });
+    }
+
+    if ($('.product-images').length > 0) {
+      var productImages = tns({
+        container: '.product-images',
+        items: 1,
+        autoplay: false,
+        autoplayButtonOutput: false,
+        navPosition: 'bottom',
+        mouseDrag: true,
+        lazyload: true,
+        controls: false,
+        nav: true
+      });
+    }
+
+  </script>
+
+  <script src="./assets/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+
+  <script src="./assets/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <!--
+<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
+
+<script>
+    var parallax = document.getElementsByClassName('parallax');
+    new simpleParallax(parallax);
+</script>
+-->
+
+  <script src="./assets/wow.min.js"></script>
+
+  <script>
+    if ('loading' in HTMLImageElement.prototype) {
+      const element = document.querySelectorAll('[loading="lazy"]');
+      element.forEach(el => {
+        el.src = el.dataset.src;
+      });
+    } else {
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js';
+      // script.src = 'https://cdn.jsdelivr.net/npm/vanilla-lazyload@11.0.4/dist/lazyload.min.js';
+      document.body.appendChild(script);
+    }
+  </script>
+
+  <script src="./assets/custom.js"></script>
+  <script src="./assets/ripple.min.js"></script>
+
+
+  <script src="./assets/event.js"></script>
+  <script src="./assets/magnifier.js"></script>
+  <script type="text/javascript">
+    var evt = new Event(),
+      m = new Magnifier(evt);
+
+    m.attach({
+      thumb: '.zoom',
+      mode: 'inside',
+      zoom: 2,
+      zoomable: true
+    });
+  </script>
+
+
+
+  <script src="./assets/bootstrap-slider.min.js"></script>
+  <script>
+    if ($('#filter').length > 0) {
+      var slider = new Slider('#filter');
+
+      function change() {
+        var filterSliderVal = document.getElementById("filter").value;
+        document.getElementById("minVal").innerText = filterSliderVal.split(',')[0];
+        document.getElementById("maxVal").innerText = filterSliderVal.split(',')[1]
+      } change()
+    }
+
+  </script>
+</body>
+
+</html>
