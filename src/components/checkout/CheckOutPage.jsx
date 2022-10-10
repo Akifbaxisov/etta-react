@@ -4,7 +4,7 @@ import Header from '../header/Header'
 import PageHeader from '../pageheader/PageHeader'
 import CheckOutContent from './checkoutcontent/CheckOutContent'
 
-const CheckOut = () => {
+const CheckOutPage = () => {
   return (
     <>
     <Header />
@@ -15,4 +15,4 @@ const CheckOut = () => {
   )
 }
 
-export default CheckOut
+export default CheckOutPage

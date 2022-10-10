@@ -8,11 +8,11 @@ const CheckOutContent = () => {
   return (
     <>
       <section className="container-xl px-2 px-sm-3 py-2 py-sm-3 py-lg-4">
-          <form action="https://etta.az/payment/pay" method="POST" id="checkoutForm" enctype="multipart/form-data">
-          <input type="hidden" name="_token" value="Y2a3t6cXQ1xyKI8HMcwfDlmwvla8Ap7ohF9hFPN2"/> 
+          <form action="https://etta.az/payment/pay" method="POST" id="checkoutForm" encType="multipart/form-data">
+          <input type="hidden" name="_token" defaultValue="Y2a3t6cXQ1xyKI8HMcwfDlmwvla8Ap7ohF9hFPN2"/> 
           <input type="hidden" name="paymenttypeid" id="paymenttypeid" />
-          <input type="hidden" name="cardtypeid" id="cardtypeid" value="bolkart" />
-          <input type="hidden" name="cardamounttxb" id="cardamounttxb" value="32" />
+          <input type="hidden" name="cardtypeid" id="cardtypeid" defaultValue="bolkart" />
+          <input type="hidden" name="cardamounttxb" id="cardamounttxb" defaultValue="32" />
           <input type="hidden" name="deliveryamounttxb" id="deliveryamounttxb" />
           {/* <!-- Checkout Area --> */}
           <div className="row mx-n1 mx-sm-n2 mx-xl-n3">

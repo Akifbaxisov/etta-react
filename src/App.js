@@ -12,7 +12,7 @@ import Contact from './components/footer/footernav/Contact';
 import Delivery from './components/footer/footernav/Delivery';
 import Refund from './components/footer/footernav/Refund';
 import CardPage from './components/cardpage/CardPage';
-import CheckOut from './components/checkout/CheckOut';
+import CheckOutPage from './components/checkout/CheckOutPage';
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
             <Route exact path='/delivery' element={<Delivery />} />
             <Route exact path='/refund' element={<Refund />} />
             <Route exact path='/cardpage' element ={<CardPage/>} />
-            <Route exat path='/checkout' element={<CheckOut />} />
+            <Route exact path='/checkout' element={<CheckOutPage />} />
           </Routes>
         </BrowserRouter>
    </>
